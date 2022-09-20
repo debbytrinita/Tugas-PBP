@@ -1,0 +1,112 @@
+[
+    {
+        "model":"mywatchlist.moviewatchlist",
+        "pk":1,
+        "fields":{
+            "watched":"Watched",
+            "title":"Train to Busan",
+            "rating": "4.5/5",
+            "release_date":"20 Juli 2016",
+            "review":"Film yang seru dan mendebarkan"
+        }
+},
+{
+        "model":"mywatchlist.moviewatchlist",
+        "pk":2,
+        "fields":{
+            "watched":"Watched",
+            "title":"Gonjiam Haunted Asylum",
+            "rating": "4/5",
+            "release_date":"30 Mei 2018",
+            "review":"Film horor yang bener-bener bikin merinding"
+        }
+    },
+    {
+        "model":"mywatchlist.moviewatchlist",
+        "pk":3,
+        "fields":{
+            "watched":"Watched",
+            "title":"On Your Wedding day",
+            "rating": "4.5/5",
+            "release_date":"3 Oktober 2018",
+            "review":"Film yang seru dan menghibur, tetapi bikin kesal di akhir"
+        }
+    },
+    {
+        "model":"mywatchlist.moviewatchlist",
+        "pk":4,
+        "fields":{
+            "watched":"Watched",
+            "title":"Searching",
+            "rating": "4/5",
+            "release_date":"24 Agustus 2018",
+            "review":"Film yang seru, perlu mikir dan memiliki plot twist yang cukup menarik"
+        }
+    },
+    {
+        "model":"mywatchlist.moviewatchlist",
+        "pk":5,
+        "fields":{
+            "watched":"Watched",
+            "title":"Imperfect",
+            "rating": "4.9/5",
+            "release_date":"19 Desember 2019",
+            "review":"Film yang membuat kita lebih mencintai diri sendiri"
+        }
+    },
+    {
+        "model":"mywatchlist.moviewatchlist",
+        "pk":6,
+        "fields":{
+            "watched":"Watched",
+            "title":"The Maze Runner",
+            "rating": "5/5",
+            "release_date":"17 September 2014",
+            "review":"Film dengan alur cerita yang menarik dan mendebarkan"
+        }
+    },
+    {
+        "model":"mywatchlist.moviewatchlist",
+        "pk":7,
+        "fields":{
+            "watched":"Watched",
+            "title":"Miracle in Cell No. 7",
+            "rating": "4/5",
+            "release_date":"19 Juli 2013",
+            "review":"Film yang sebenarnya sedih banget, tetapi masih ada diselipkan beberapa komedi"
+        }
+    },
+    {
+        "model":"mywatchlist.moviewatchlist",
+        "pk":8,
+        "fields":{
+            "watched":"Watched",
+            "title":"A Werewolf Boy",
+            "rating": "4.8/5",
+            "release_date":"31 Oktober 2012",
+            "review":"Film yang awalnya seru, lucu, menghibur, tetapi di bikin nangis di akhir"
+        }
+    },
+    {   "model":"mywatchlist.moviewatchlist",
+        "pk":9,
+        "fields":{
+            "watched":"Not Watched Yet",
+            "title":"Extreme Job",
+            "rating": "-",
+            "release_date":"20 Februari 2019",
+            "review":"-"
+        }
+    },
+    {
+        "model":"mywatchlist.moviewatchlist",
+        "pk":10,
+        "fields":{
+            "watched":"Not Watched Yet",
+            "title":"Knives Out",
+            "rating": "-",
+            "release_date":"27 November 2019",
+            "review":"-"
+        }
+    }
+    
+]
