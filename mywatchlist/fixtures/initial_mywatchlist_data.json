@@ -1,6 +1,6 @@
 [
     {
-        "model":"mywatchlist.moviewatchlist",
+        "model":"mywatchlist.mywatchlist",
         "pk":1,
         "fields":{
             "watched":"Watched",
@@ -11,7 +11,7 @@
         }
 },
 {
-        "model":"mywatchlist.moviewatchlist",
+        "model":"mywatchlist.mywatchlist",
         "pk":2,
         "fields":{
             "watched":"Watched",
@@ -22,7 +22,7 @@
         }
     },
     {
-        "model":"mywatchlist.moviewatchlist",
+        "model":"mywatchlist.mywatchlist",
         "pk":3,
         "fields":{
             "watched":"Watched",
@@ -33,7 +33,7 @@
         }
     },
     {
-        "model":"mywatchlist.moviewatchlist",
+        "model":"mywatchlist.mywatchlist",
         "pk":4,
         "fields":{
             "watched":"Watched",
@@ -44,7 +44,7 @@
         }
     },
     {
-        "model":"mywatchlist.moviewatchlist",
+        "model":"mywatchlist.mywatchlist",
         "pk":5,
         "fields":{
             "watched":"Watched",
@@ -55,7 +55,7 @@
         }
     },
     {
-        "model":"mywatchlist.moviewatchlist",
+        "model":"mywatchlist.mywatchlist",
         "pk":6,
         "fields":{
             "watched":"Watched",
@@ -66,7 +66,7 @@
         }
     },
     {
-        "model":"mywatchlist.moviewatchlist",
+        "model":"mywatchlist.mywatchlist",
         "pk":7,
         "fields":{
             "watched":"Watched",
@@ -77,7 +77,7 @@
         }
     },
     {
-        "model":"mywatchlist.moviewatchlist",
+        "model":"mywatchlist.mywatchlist",
         "pk":8,
         "fields":{
             "watched":"Watched",
@@ -87,7 +87,7 @@
             "review":"Film yang awalnya seru, lucu, menghibur, tetapi di bikin nangis di akhir"
         }
     },
-    {   "model":"mywatchlist.moviewatchlist",
+    {   "model":"mywatchlist.mywatchlist",
         "pk":9,
         "fields":{
             "watched":"Not Watched Yet",
@@ -98,7 +98,7 @@
         }
     },
     {
-        "model":"mywatchlist.moviewatchlist",
+        "model":"mywatchlist.mywatchlist",
         "pk":10,
         "fields":{
             "watched":"Not Watched Yet",

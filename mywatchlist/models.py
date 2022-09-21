@@ -1,6 +1,6 @@
 from django.db import models
 
-class MovieWatchList(models.Model):
+class MyWatchList(models.Model):
     watched = models.TextField()
     title = models.TextField()
     rating = models.TextField()

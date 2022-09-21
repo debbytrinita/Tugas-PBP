@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from mywatchlist.models import MovieWatchList
+from mywatchlist.models import MyWatchList
 from django.http import HttpResponse
 from django.core import serializers
 
@@ -13,15 +13,15 @@ def show_json(request):
     return HttpResponse(serializers.serialize("json", data), content_type="application/json")
 
 def show_json_by_id(request,id):
-    data = MovieWatchList.objects.filter(pk=id)
+    data = MyWatchList.objects.filter(pk=id)
     return HttpResponse(serializers.serialize("json", data), content_type="application/json")
 
 def show_xml_by_id(request,id):
-    data = MovieWatchList.objects.filter(pk=id)
+    data = MyWatchList.objects.filter(pk=id)
     return HttpResponse(serializers.serialize("xml", data), content_type="application/xml")
 
-data = MovieWatchList.objects.all()
-my_watch_list = MovieWatchList.objects.all()
+data = MyWatchList.objects.all()
+my_watch_list = MyWatchList.objects.all()
 context = {
     'list_film': my_watch_list,
     
