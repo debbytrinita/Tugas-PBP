@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h3>Username: {{username}} </h3>
+<br>
+
+<button><a href="{% url 'todolist:add_new_task' %}">Add New Task</a></button>
+<table>
+    <tr>
+        <th>Date</th>
+        <th>Title</th>
+        <th>Description</th>
+    </tr>
+    {% comment %} Tambahkan data di bawah baris ini {% endcomment %}
+    
+    {% for todolist in data_todolist%}
+        <tr>
+            <th>{{todolist.date}}</th>
+            <th>{{todolist.title}}</th>
+            <th>{{todolist.description}}</th>
+        </tr>
+    
+{% endfor %}
+
+
+</table>
+
+<h5>Sesi terakhir login: {{ last_login }}</h5>
+
+<button><a href="{% url 'todolist:logout' %}">Logout</a></button>
+{% endblock content %}
+
