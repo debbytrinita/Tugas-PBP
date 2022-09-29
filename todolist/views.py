@@ -71,8 +71,5 @@ def add_new_task(request):
            
             return HttpResponseRedirect(reverse('todolist:show_todolist'))
 
-    context ={'form': todolist_form
-
-    }
-
+    context ={'form': todolist_form}
     return render(request, 'add_new_task.html', context)
