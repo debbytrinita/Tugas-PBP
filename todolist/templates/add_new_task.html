@@ -27,7 +27,7 @@
 {% block content %}
 <nav class="navbar navbar-light px-4 mb-3" style="background-color:#93a9d1;">
   <span class="navbar-text mb-0 h5" style="color: white;">{{username}}</span>
-  <h3 style="color: white; text-align: center; margin-left: 12%;">Todolist</h3>
+  <h3 style="color: white; ">Todolist</h3>
   <div class="btn-group" role="group">
       <form method="post" action="{% url 'todolist:show_todolist' %}" >
           {% csrf_token %}
