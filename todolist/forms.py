@@ -1,4 +1,4 @@
-from tkinter import Widget
+
 from todolist.models import Task
 from django import forms
 class todolist_form(forms.ModelForm):
