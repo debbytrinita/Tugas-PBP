@@ -1,45 +1,62 @@
-{% extends 'base.html' %}
-
-{% block meta %}
-<title>Login</title>
-{% endblock meta %}
-
 {% block content %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <style>
+  .container{
+    border:5px solid #F7CACA;
+    background-color: white;
+    margin-top: 10%;
+    width: fit-content;
+    padding: 3%;
+    padding-left: 5%;
+    padding-right: 5%;
+    
+  }
+  button{
+    padding: 2%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color:#F7CACA
+  }
+  body{
+    background-color: #93a9d1;
+  }
 
-<div class = "login">
-
-    <h1>Login</h1>
-
-    <form method="POST" action="">
-        {% csrf_token %}
-        <table>
-            <tr>
-                <td>Username: </td>
-                <td><input type="text" name="username" placeholder="Username" class="form-control"></td>
-            </tr>
-                    
-            <tr>
-                <td>Password: </td>
-                <td><input type="password" name="password" placeholder="Password" class="form-control"></td>
-            </tr>
-
-            <tr>
-                <td></td>
-                <td><input class="btn login_btn" type="submit" value="Login"></td>
-            </tr>
-        </table>
-    </form>
-
-    {% if messages %}
-        <ul>
-            {% for message in messages %}
-                <li>{{ message }}</li>
-            {% endfor %}
-        </ul>
-    {% endif %}     
-        
-    Belum mempunyai akun? <a href="{% url 'todolist:register' %}">Buat Akun</a>
-
+  </style>
+  </head>
+<div class = "login ">
+    <div class=" container rounded h-100 d-flex justify-content-center align-items-center">
+        <form method="POST" action="" name="login" class="need-validation" >
+            {% csrf_token %}
+              <h3 class="text-center">LOGIN</h3>
+              <hr>
+              <div class="form-group">
+                <label>Username</label>
+                <input type="text" name="username" placeholder="Masukkan Username" class="form-control" required>
+              </div>
+              <div class ="form-group">
+                <label>Password</label>
+                <input type="password" name="password" placeholder="Masukkan Password" class="form-control" required>
+              </div>
+              <div class="d-grid gap-2">
+                <button type="submit" class="btn btn-outline-info btn-sm" value="login">SUBMIT</button>
+              </div>
+              <div class="messages">
+                {% if messages %}
+                
+                  {% for message in messages %}
+                    <p style="color:red">{{ message }}</p>
+                  {% endfor %}
+                
+                {% endif %} 
+              </div>
+              <p>Belum mempunyai akun? <a href="{% url 'todolist:register' %}">Buat Akun</a></p>
+        </form>
+    </div>
 </div>
-
 {% endblock content %}
