@@ -103,7 +103,19 @@ Halaman akan menjadi berantakan ketika file CSS gagal dipanggil oleh file HTML (
         }
    Kode diatas akan diterapkan pada elemen yang memiliki ID berupa header
 
-4. Attribute Selector yaitu selector yang memilih elemen berdasarkan atribut. Contoh: 
+4. Attribute Selector yaitu selector yang memilih elemen berdasarkan atribut. Contoh:
+ 
+        input[type=text] {
+           padding: 10px;
+           border: 1px solid black;
+        }
+   Kode di atas akan memilih semua elemen input yang memiliki atribut type='text'
+5. Universal selector yaitu selector yang digunakan untuk menyeleksi semua elemen. Contoh:
 
-
+        * {
+           border: 1px solid black;
+        }
+   Kode diatas artinya semua elemen akan memiliki garis solid dengan ukuran 1px dan berwarna hitam
 ## Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
+Saya melakukan kostumisasi template HTML menggunakan Bootstrap sehingga bersifat responsive. Untuk **halaman login**, saya membuat container yang disertai dengan border berwarna pink. Di dalam container tersebut saya masukkan form untuk mengisi username dan password. Kemudian di bawahnya saya tambahkan button untuk men-submit form yang telah diisi. Lalu, dibawahnya terdapat link untuk melakukan registrasi jika belum mempunyai akun. Untuk **halaman register**, karena form nya dibuat dengan UserCreationForm, maka saya melakukan for loop kepada masing-masing label dan inputnya. Kemudian menambahkan button untuk men-submit formulir dan menambahkan link menuju halaman login jika sudah memiliki akun. Untuk **halaman add_new_task**, saya menambahkan navbar di atasnya yang dilengkapi button untuk logout dan kembali ke halaman todolist. Setelah itu saya membuat container yang didalamnya terdapat formulir untuk menambahkan task dan disertai button untuk men-submit task tersebut. 
+Untuk **halaman todolist**, saya juga membuat navbar yang dilengkapi button untuk logout dan untuk menambah task baru/menuju ke halaman add_new_task. Di pojok kiri task bar terdapat nama user/akun yang sedang login. Kemudian saya mengimplementasikan card untuk setiap todolist. Pada setiap card terdapat judul, deskripsi task, dan tanggal task tersebut dibuat. Selain itu saya juga tambahkan hover disetiap card todolist

@@ -6,10 +6,16 @@
     .card{
         margin: 2%;
         text-align: center;
+
     }
     .footer{
         position: fixed;
     }
+    .card:hover{
+        transform:scale(1.1);
+        transition: .5s;
+    }
+    
 </style>
 {% endblock meta %}
 {% block content %}
@@ -34,7 +40,7 @@
     
     {% for todolist in data_todolist%}
     <div class = "container rounded h-100 d-flex flex-column justify-content-center align-items-center">
-        <div class="card " style="width:23rem;">
+        <div class="card" style="width:23rem;">
             <div class="card-body">
                 <h5 class="card-title">{{todolist.title}}</h5>
                 <small class="card-subtitle mb-2 text-muted">{{todolist.date}}</small>
