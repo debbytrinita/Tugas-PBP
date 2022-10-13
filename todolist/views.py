@@ -1,4 +1,3 @@
-from turtle import title
 from todolist.forms import todolist_form
 from django.shortcuts import render
 from django.contrib.auth.forms import UserCreationForm
@@ -8,7 +7,7 @@ from django.contrib.auth import authenticate, login
 from django.contrib.auth import logout
 from django.contrib.auth.decorators import login_required
 import datetime
-from django.http import HttpResponse, HttpResponseNotFound, HttpResponseRedirect
+from django.http import HttpResponse, HttpResponseNotFound, HttpResponseRedirect, JsonResponse
 from django.urls import reverse
 from todolist.models import Task
 from django.core import serializers
@@ -101,11 +100,9 @@ def add(request):
             title = title_user,
             description = description_user
         )
-        
+        return JsonResponse(response_data)
 
-        return HttpResponse(b"CREATED", status=201)
-
-    return HttpResponseNotFound()
+    return render(request, 'todolist.html', {'posts':posts})        
 
 
 
