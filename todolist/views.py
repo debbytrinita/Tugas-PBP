@@ -1,3 +1,4 @@
+from turtle import title
 from todolist.forms import todolist_form
 from django.shortcuts import render
 from django.contrib.auth.forms import UserCreationForm
@@ -7,9 +8,11 @@ from django.contrib.auth import authenticate, login
 from django.contrib.auth import logout
 from django.contrib.auth.decorators import login_required
 import datetime
-from django.http import HttpResponseRedirect
+from django.http import HttpResponse, HttpResponseNotFound, HttpResponseRedirect
 from django.urls import reverse
 from todolist.models import Task
+from django.core import serializers
+
 
 @login_required(login_url='/todolist/login/')
 def show_todolist(request):
@@ -18,6 +21,7 @@ def show_todolist(request):
     'data_todolist' : data_todolist,
     'username': request.COOKIES['username'],
     'last_login' : request.COOKIES['last_login'],
+    'form': todolist_form,
 }
     return (render(request, "todolist.html",context))
 
@@ -73,3 +77,35 @@ def add_new_task(request):
 
     context ={'form': todolist_form}
     return render(request, 'add_new_task.html', context)
+
+def get_todolist_json(request):
+    todolist_item = Task.objects.filter(user=request.user)
+    return HttpResponse(serializers.serialize('json', todolist_item))
+
+def add(request):
+    posts = Task.objects.filter(user=request.user)
+    response_data = {}
+    if request.method == "POST":
+        username = request.user
+        date_user = datetime.date.today()
+        title_user = request.POST.get('title')
+        description_user = request.POST.get('description') 
+
+        response_data['user'] = username
+        response_data['date'] = date_user
+        response_data['title'] = title_user
+        response_data['description'] = description_user
+        Task.objects.create(
+            user = username,
+            date = date_user,
+            title = title_user,
+            description = description_user
+        )
+        
+
+        return HttpResponse(b"CREATED", status=201)
+
+    return HttpResponseNotFound()
+
+
+
